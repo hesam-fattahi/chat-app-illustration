@@ -46,25 +46,16 @@ h6 {
 body {
   background-color: hsl(0deg, 0%, 100%);
 }
-body::before {
-  content: "";
-  width: 100%;
-  height: 55%;
-  border-radius: 0 0 17rem 0;
-  background: linear-gradient(45deg, hsl(264deg, 100%, 61%), hsl(285deg, 100%, 63%));
-  position: absolute;
-  top: 0;
-  left: 0;
-  transform: translateX(-50%);
-  z-index: -1;
-}
 
 .container {
   z-index: 2;
   display: flex;
   flex-direction: column-reverse;
+  align-items: center;
   gap: 3.75rem;
   padding: 4rem 2.25rem;
+  max-width: 30rem;
+  margin: 0 auto;
 }
 
 .description {
@@ -81,9 +72,22 @@ body::before {
   color: hsl(270deg, 7%, 64%);
 }
 
+@media (min-width: 50em) {
+  .container {
+    height: 100%;
+    max-width: 64rem;
+    padding: 0 3rem;
+    padding-left: clamp(3rem, -13rem + 25vw, 9.5rem);
+    gap: clamp(4rem, -1rem + 10vw, 8rem);
+    flex-direction: row-reverse;
+  }
+  .description {
+    text-align: left;
+  }
+}
 .app {
+  flex: 1 0 15.5rem;
   max-width: 15.5rem;
-  margin: 0 auto;
   border: 0.625rem solid hsl(0deg, 0%, 100%);
   border-radius: 2rem;
   box-shadow: 0 1rem 2rem rgba(62, 39, 83, 0.2);
