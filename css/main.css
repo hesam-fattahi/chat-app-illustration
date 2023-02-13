@@ -46,6 +46,25 @@ h6 {
 body {
   background-color: hsl(0deg, 0%, 100%);
 }
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 31rem;
+  height: 54%;
+  transform: translateX(-50%);
+  border-radius: 0 0 15rem 0;
+  background: linear-gradient(45deg, hsl(264deg, 100%, 61%), hsl(285deg, 100%, 63%));
+}
+@media (min-width: 50rem) {
+  body::before {
+    height: 87%;
+    border-radius: 0 0 15rem 15rem;
+    transform: translateX(-17%);
+  }
+}
 
 .container {
   z-index: 2;
