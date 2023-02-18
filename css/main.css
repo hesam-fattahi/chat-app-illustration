@@ -1,3 +1,13 @@
+/*
+App TODO
+    1. README add screenshot
+    2. README add links
+    3. README add useful resources
+
+    1. CSS add background shapes
+    2. radio colors check
+    3. improve CSS variables namings
+*/
 *,
 *::before,
 *::after {
@@ -72,18 +82,6 @@ body {
   color: hsl(270deg, 7%, 64%);
 }
 
-@media (min-width: 50em) {
-  .container {
-    height: 100%;
-    max-width: 64rem;
-    padding: 0 3rem;
-    gap: clamp(4rem, -1rem + 10vw, 8rem);
-    flex-direction: row-reverse;
-  }
-  .description {
-    text-align: left;
-  }
-}
 .app {
   width: 15.5rem;
   min-width: 15.5rem;
@@ -231,18 +229,20 @@ body {
   background-color: hsl(271deg, 36%, 24%);
 }
 
+@media (min-width: 50em) {
+  .container {
+    height: 100%;
+    max-width: 64rem;
+    padding: 0 3rem;
+    gap: clamp(4rem, -1rem + 10vw, 8rem);
+    flex-direction: row-reverse;
+  }
+  .description {
+    text-align: left;
+  }
+}
 @media (min-width: 64rem) {
   .app {
     margin-left: 6.75rem;
   }
-}
-/*
-App TODO
-    1. README add screenshot
-    2. README add links
-    3. README add useful resources
-
-    1. CSS add background shapes
-    2. radio colors check
-    3. CSS change namings
-*//*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */
