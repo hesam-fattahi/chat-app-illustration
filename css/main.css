@@ -109,15 +109,15 @@ body {
   font-size: 0.75rem;
   background: linear-gradient(45deg, hsl(264deg, 100%, 61%), hsl(293deg, 100%, 63%));
   color: hsl(0deg, 0%, 100%);
-  padding: 2rem 0.75rem 0.75rem;
-  border-radius: 1.375rem 1.375rem 0.5rem 0.5rem;
+  padding: 2rem 0.75rem 0.5rem;
+  border-radius: 1.375rem 1.375rem 0.25rem 0.25rem;
   display: flex;
   align-items: center;
   gap: 0.125rem;
 }
 .app__chat {
   font-size: 0.5rem;
-  padding: 0.5rem;
+  padding: 0.625rem 0.5rem;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -190,11 +190,11 @@ body {
 }
 .message--sent {
   margin-right: auto;
-  border-radius: 0.75rem 0.75rem 0.75rem 0.25rem;
+  border-radius: 0.625rem 0.625rem 0.625rem 0.25rem;
 }
 .message--received {
   margin-left: auto;
-  border-radius: 0.75rem 0.75rem 0.25rem 0.75rem;
+  border-radius: 0.625rem 0.625rem 0.25rem 0.625rem;
 }
 .message--sent + .message--received, .message--received + .message--sent {
   margin-top: 0.5rem;
@@ -222,8 +222,8 @@ body {
   flex: 1;
 }
 .input__btn {
-  width: 1.375rem;
-  height: 1.375rem;
+  width: 1.5rem;
+  height: 1.5rem;
   border-radius: 50%;
   display: grid;
   place-items: center;

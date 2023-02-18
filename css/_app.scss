@@ -24,14 +24,14 @@
     font-size: 0.75rem;
     @include bg-gradient(45deg);
     color: $color-white;
-    padding: 2rem 0.75rem 0.75rem;
-    border-radius: 1.375rem 1.375rem 0.5rem 0.5rem;
+    padding: 2rem 0.75rem 0.5rem;
+    border-radius: 1.375rem 1.375rem 0.25rem 0.25rem;
     @include flex-center-aligned(0.125rem);
   }
 
   &__chat {
     font-size: 0.5rem;
-    padding: 0.5rem;
+    padding: 0.625rem 0.5rem;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
@@ -110,12 +110,12 @@
 
   &--sent {
     margin-right: auto;
-    border-radius: 0.75rem 0.75rem 0.75rem 0.25rem;
+    border-radius: 0.625rem 0.625rem 0.625rem 0.25rem;
   }
 
   &--received {
     margin-left: auto;
-    border-radius: 0.75rem 0.75rem 0.25rem 0.75rem;
+    border-radius: 0.625rem 0.625rem 0.25rem 0.625rem;
   }
 
   &--sent + &--received,
@@ -150,7 +150,7 @@
   }
 
   &__btn {
-    @include circle(1.375rem);
+    @include circle(1.5rem);
     display: grid;
     place-items: center;
     color: $color-white;
