@@ -13,7 +13,21 @@ $app-bg: hsl(270, 20%, 96%);
 $submit-btn: hsl(271, 36%, 24%);
 $radio-outline: hsl(289, 100%, 72%);
 
-$bg-gradient: linear-gradient(45deg, hsl(264, 100%, 61%), hsl(293, 100%, 63%));
+@mixin bg-gradient($deg) {
+  background: linear-gradient($deg, hsl(264, 100%, 61%), hsl(293, 100%, 63%));
+}
+
+@mixin flex-center-aligned($gap) {
+  display: flex;
+  align-items: center;
+  gap: $gap;
+}
+
+@mixin circle($radius) {
+  width: $radius;
+  height: $radius;
+  border-radius: 50%;
+}
 
 @import "./reset";
 @import "./page";
@@ -21,16 +35,11 @@ $bg-gradient: linear-gradient(45deg, hsl(264, 100%, 61%), hsl(293, 100%, 63%));
 
 /*
 App TODO
-    - README add screenshot
-    - README add links
-    - README add useful resources
+    1. README add screenshot
+    2. README add links
+    3. README add useful resources
 
-    - CSS add background shapes
-    - CSS change namings
-    - CSS cleanup ***
-    - CSS change page name (to I'm nit sure what)
-    
-    - HTML change all elements to div
-    - HTML check accessibility (aria-hidden)
-    - HTML check other solutions for semantics
+    1. CSS add background shapes
+    2. radio colors check
+    3. CSS change namings
 */

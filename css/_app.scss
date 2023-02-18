@@ -1,58 +1,54 @@
 .app {
-  flex: 1 0 15.5rem;
-  max-width: 15.5rem;
-  border: 0.625rem solid $color-white;
+  width: 15.5rem;
+  min-width: 15.5rem;
+  background-color: hsl(270, 20%, 96%);
   border-radius: 2rem;
+  border: 0.625rem solid $color-white;
   box-shadow: 0 1rem 2rem rgba(62, 39, 83, 0.2);
   position: relative;
-  background-color: hsl(270, 20%, 96%);
 
   &::before {
     content: "";
+    background-color: $color-white;
+    width: 8rem;
+    height: 1.75rem;
     position: absolute;
     top: -0.5rem;
     left: 50%;
     transform: translateX(-50%);
-    background-color: $color-white;
-    width: 8rem;
-    height: 1.75rem;
     border-radius: 0 0 1rem 1rem;
     z-index: 50;
   }
 
   &__topbar {
-    padding: 2rem 0.75rem 0.75rem;
-    background: $bg-gradient;
-    color: $color-white;
-    display: flex;
-    align-items: center;
-    gap: 0.125rem;
-    border-radius: 1.375rem 1.375rem 0.5rem 0.5rem;
     font-size: 0.75rem;
+    @include bg-gradient(45deg);
+    color: $color-white;
+    padding: 2rem 0.75rem 0.75rem;
+    border-radius: 1.375rem 1.375rem 0.5rem 0.5rem;
+    @include flex-center-aligned(0.125rem);
   }
 
   &__chat {
-    display: flex;
-    flex-direction: column;
-    gap: 0.375rem;
     font-size: 0.5rem;
     padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
   }
 
   &__input {
     background-color: $color-white;
+    padding: 0.5rem 0.375rem 0.375rem 1.25rem;
     margin: 0.5rem;
     border-radius: 50rem;
-    display: flex;
-    align-items: center;
-    padding: 0.5rem 0.375rem 0.375rem 1.25rem;
+    @include flex-center-aligned(0);
   }
 }
 
 .topbar {
   &__info {
     flex: 1;
-    line-height: 1.3;
     display: flex;
     gap: 0.5rem;
   }
@@ -69,14 +65,13 @@
   }
 
   &__img {
-    width: 1.5rem;
-    height: 1.5rem;
-    border-radius: 50%;
+    @include circle(1.5rem);
     border: 1px solid $color-white;
   }
 }
 
 .message {
+  line-height: 1.35;
   &--text {
     padding: 0.25rem;
     max-width: 60%;
@@ -96,15 +91,9 @@
   }
 
   &--radio {
-    background: linear-gradient(
-      45deg,
-      hsl(293, 100%, 63%),
-      hsl(264, 100%, 61%)
-    );
+    @include bg-gradient(230deg);
     padding: 0.5rem 0.875rem 0.5rem 0.625rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
+    @include flex-center-aligned(0.5rem);
     width: 75%;
     color: $color-white;
   }
@@ -121,12 +110,12 @@
 
   &--sent {
     margin-right: auto;
-    border-radius: 0.625rem 0.625rem 0.625rem 0.25rem;
+    border-radius: 0.75rem 0.75rem 0.75rem 0.25rem;
   }
 
   &--received {
     margin-left: auto;
-    border-radius: 0.625rem 0.625rem 0.25rem 0.625rem;
+    border-radius: 0.75rem 0.75rem 0.25rem 0.75rem;
   }
 
   &--sent + &--received,
@@ -137,9 +126,7 @@
 
 .radio {
   &__btn {
-    width: 0.75rem;
-    height: 0.75rem;
-    border-radius: 50%;
+    @include circle(0.75rem);
     border: 1px solid $radio-outline;
   }
 
@@ -163,12 +150,16 @@
   }
 
   &__btn {
-    width: 1.375rem;
-    height: 1.375rem;
-    border-radius: 50%;
+    @include circle(1.375rem);
     display: grid;
     place-items: center;
     color: $color-white;
     background-color: $submit-btn;
+  }
+}
+
+@media (min-width: 64rem) {
+  .app {
+    margin-left: 6.75rem;
   }
 }
