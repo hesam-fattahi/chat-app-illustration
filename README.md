@@ -13,6 +13,11 @@ Users should be able to:
 - View the optimal layout for the component depending on their device's screen size
 - **Bonus**: See the chat interface animate on the initial load
 
+### Links
+
+- Solution URL: [Chat app illustration | Frontend mentor](https://www.frontendmentor.io/solutions/chat-app-illustration-sass-bem-mobilefirst-6IY2iHpJUP)
+- Live Site URL: [https://hesam-fattahi.github.io/chat-app-illustration/](https://hesam-fattahi.github.io/chat-app-illustration/)
+
 ## My process
 
 ### Built with
