@@ -43,14 +43,9 @@ h6 {
   isolation: isolate;
 }
 
-html {
-  overflow: hidden;
-}
-
 body {
   background-color: #fafafa;
   position: relative;
-  overflow: hidden;
 }
 body::before, body::after {
   content: "";
@@ -69,6 +64,7 @@ body::before {
 }
 body::after {
   background-color: #f9f4f9;
+  background-color: chartreuse;
   bottom: 0;
   right: 0;
   border-top-left-radius: 16.5rem;

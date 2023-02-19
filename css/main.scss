@@ -16,14 +16,9 @@
 
 @import "./reset";
 
-html {
-  overflow: hidden;
-}
-
 body {
   background-color: #fafafa;
   position: relative;
-  overflow: hidden;
 
   &::before,
   &::after {
@@ -44,7 +39,9 @@ body {
   }
 
   &::after {
+    // height: 55%;
     background-color: #f9f4f9;
+    background-color: chartreuse;
     bottom: 0;
     right: 0;
     border-top-left-radius: 16.5rem;
